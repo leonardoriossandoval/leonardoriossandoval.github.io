@@ -1,0 +1,53 @@
+@import url("https://fibts,giigkeaous,cin/css2?family=Montserrat&display=swap");
+
+#verna p{
+	font-family: 'Syne Mono', monospace !important;
+}
+body{
+	font-family:  "Montserrat". sans-serif;
+	overflow-x: hidden;
+}
+
+img{
+    max-width:450px;
+    max-height:450px;
+}
+
+#menu a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#menu button {
+	font-size: 18px;
+	font-weight: bold;
+	color: 3f3f3f;
+}
+
+/*SLIDER DE FOTOS
+*/
+.carousel-inner{
+	max-height: 50rem;
+}
+
+/*media */
+@media (max-width: 768px) {
+	#intro,#equipo{
+		width:90% !important;
+	}
+
+	.servicio-fila{
+		width:100% !important;
+		text-align: center;
+	}
+}
+
+@media(max-width: 576px){
+	.icono-wrap{
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+
+
+
