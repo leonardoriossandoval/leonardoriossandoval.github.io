@@ -1,53 +1,39 @@
-@import url("https://fibts,giigkeaous,cin/css2?family=Montserrat&display=swap");
 
-#verna p{
-	font-family: 'Syne Mono', monospace !important;
-}
-body{
-	font-family:  "Montserrat". sans-serif;
-	overflow-x: hidden;
-}
 
-img{
-    max-width:450px;
-    max-height:450px;
+.verna{
+	font-family: 'Noto Serif Khojki', serif;
+	font-family: 'Permanent Marker', cursive;
+	color:#FFFFFF;
+	margin-bottom:1px ;
+	margin-top: 30px;
+	font-size: 60px;
 }
+.vernasub{
+	font-family: 'Noto Serif Khojki', serif;
+	font-family: 'Permanent Marker', cursive;
+	color:#FFFFFF;
+	font-size: 28px;}
 
-#menu a {
-	font-size: 22px;
-	font-weight: bold;
-}
 
-#menu button {
-	font-size: 18px;
-	font-weight: bold;
-	color: 3f3f3f;
-}
-
-/*SLIDER DE FOTOS
-*/
-.carousel-inner{
-	max-height: 50rem;
+.foot{
+	color:#FFFFFF;
+	margin-bottom:15px ;
+	margin-top: 20px;
+	font-size: 15px;
+	justify-content: center;
+	;
 }
 
-/*media */
-@media (max-width: 768px) {
-	#intro,#equipo{
-		width:90% !important;
-	}
-
-	.servicio-fila{
-		width:100% !important;
-		text-align: center;
-	}
+video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 105%;
+  min-height: 100%;
+  transform: translateX(calc((100% - 100vw) / 2));
+  z-index: -2;
 }
 
-@media(max-width: 576px){
-	.icono-wrap{
-		flex-wrap: wrap;
-		justify-content: center !important;
-	}
+a{
+	text-decoration: none;
 }
-
-
-
