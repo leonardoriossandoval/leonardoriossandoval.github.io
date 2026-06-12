@@ -2,198 +2,298 @@
 <html lang="en">
 
 <head>
+    <!-- configuració bàsica de la pàgina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leonardo ríos</title>
+
+    <!-- bootstrap ens dona navbar, botons i responsive fàcil -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- font de google -->
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-    <title>Leonardo Ríos</title>
+
+    <!-- el nostre css -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="color:white">Leonardo Ríos Sandoval</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#titolprin">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portport">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#workxp">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Studies</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<br>
 
 <body>
-    <!-- BOOTSTRAP carrusel -->
-    <div id="contenidor">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/upc.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/dam.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/frontend.jpg" alt="Third slide">
+
+    <!-- navbar: menú superior -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Leonardo Ríos Sandoval</a>
+
+                <!-- botó del menú en pantalla petita -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- enllaços del menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">about me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-        </div>
-    </div>
-    <p>&nbsp;</p>
-
-    <!-- About me -->
-    <h1 id="titolprin" class="titolprin">About me</h1>
-    <br>
-    <div class="container11">
-        <div class="block"><img src="img/fot.jpg"></div>
-        <div class="block">
+        </nav>
+    </header>
 
 
-            <p>My name is Leonardo Ríos and I am a <b><i>Chemical Engineering</i></b> student
-                from <b><i>Universitat Politècnica de Catalunya</i></b> since 2019.
-                Recently I wanted to add some new skills due to my
-                role as half-time worker and half-time student.
-                <br>
-                <br>
-                So I <b><i>decided</i></b> to start studying <b><i>Cross Platform Applications
-                        Development</i></b> at <b><i>UOC-Jesuïtes</i></b> to improve my programming skills
-                and be able to work as a programmer until I finish my degree.
-            </p>
-        </div>
-    </div>
+    <!-- carrusel: imatges principals -->
+    <main>
 
-    <br>
-    <br>
+        <section id="contenidor">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-    <!-- PORTFOLIO -->
-    <h1 id="portport" class="titolprin">Portfolio</h1>
-    <br>
-    <div class="container11">
-        <div class="block">
-            <img src="img/port.jpg">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/202-nova-marca-uoc.jpg" class="d-block w-100" alt="engineering image">
+                    </div>
 
-        </div>
-    </div>
-    <br>
-    <p class="anotacions">Ooops! I Still working on my projects
-        recent projects but you can check my <a href="https://github.com/leonardoriossandoval">GitHub </a>
-        or wait until I post something!
-    </p>
+                    <div class="carousel-item">
+                        <img src="./img/dam.jpg" class="d-block w-100" alt="software development image">
+                    </div>
 
-    <br>
-    <br>
-    <!-- workxp -->
+                    <div class="carousel-item">
+                        <img src="./img/frontend.jpg" class="d-block w-100" alt="frontend development image">
+                    </div>
+                </div>
 
-    <h1 id="workxp" class="titolprin">Skills</h1>
-    <div class="containersalt">
-        <div class="block">
-            <figure>
-                <canvas id="modelsChart"></canvas>
-            </figure>
-        </div>
-        <div class="block2">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">next</span>
+                </button>
+
+            </div>
+        </section>
 
 
-            <p>As you can see, I have various skills acquired over the years,
-                some in a more academic setting and others in a professional environment,
-                as I work and study simultaneously:
-                <br>
-                <br>
+        <!-- about me: foto i descripció -->
+        <section id="about" class="about-section">
+            <h1 class="titolprin">about me</h1>
 
-                <b>Engineering:</b>
-                As an engineering student in a faculty with an industrial focus, despite studying Chemical Engineering,
-                I have a strong foundation in core concepts from the first two years of the degree. In terms of
-                employability,
-                I can highlight my knowledge in areas such as business, coding, statistics,
-                industrial control, and all the fundamental subjects from the first year, including mathematics,
-                physics, and chemistry.
-                <br>
-                <br>
-                <b>Coding:</b> I have also had the opportunity to join the UPCoders,
-                the programming club of my faculty, through which I have had the chance to
-                participate in 2 hackathons and learn to program "on the fly" and according to the project's needs.
-                <br>
-                <i style="background-color: blue; opacity: 40%; color:aliceblue">Main uses: HTML5, CSS3, Javascript, Bootstrap, Python</i>
-                <br>
-                <br>
-                <b>Customer service:</b>
-                I have been working as a shop assistant in a bookstore for 2 years. I have the ability to provide
-                excellent customer service,
-                be proactive in problem-solving, and most importantly,
-                ensure that even in the face of issues and setbacks experienced by customers,
-                they leave with a smile, feeling well taken care of.
-                It is worth noting that I also handled sales replenishment orders and inventory control.
-                <br>
-                <br>
-                <b>Sales:</b>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/fot.png" alt="leonardo ríos">
+                </div>
 
-                In addition to the aforementioned work, it is also important to highlight
-                my role in managing customer needs and providing guidance to offer products that meet their
-                expectations.
+            <div class="about-text">
+                <p>
+                    My name is <b>Leonardo Ríos</b> and I am a <b>Junior Software Developer</b> with studies in
+                    <b>Cross-Platform Application Development</b> and a technical background in engineering.
+                </p>
+
+                <p>
+                    I have experience in <b>business software environments</b>, working with
+                    <b>SAGE ERP</b>, <b>SQL</b>, <b>Crystal Reports</b> and
+                    <b>Verifactu-related tasks</b>. I started at <b>Nortua</b> as an intern and later continued
+                    as a <b>Junior ERP Technician</b>, supporting real company processes and custom software needs.
+                </p>
+
+                <p>
+                    I have been also part of the <b>Electronics Control Units in the Hardware Department</b> at <b>e-Tech Racing</b>,
+                    a <b>Formula Student</b> team, where I collaborate on electronics-related tasks,
+                    <b>PCB assembly</b>, testing and validation of systems for an electric vehicle.
+                </p>
+
+                <p>
+                    Currently, I am studying <b>Computer Engineering at UOC</b> and focusing on
+                    <b>software development</b>, <b>databases</b>, <b>web technologies</b> and
+                    <b>automation</b>. My goal is to keep growing as a developer and build useful,
+                    practical and maintainable software.
+                </p>
+            </div>
+            </div>
+        </section>
 
 
+        <!-- portfolio: projectes -->
+        <section id="portfolio" class="portfolio-section">
+            <h1 class="titolprin">portfolio</h1>
 
+            <p class="portfolio-intro">
+                some small projects and tools developed while learning programming, automation and cybersecurity basics.
             </p>
 
+            <div class="portfolio-grid">
+
+                <article class="project-card">
+                    <h2>password generator</h2>
+
+                    <p>
+                        simple python script to generate secure passwords using random characters.
+                        this project helped me practise python basics, strings and user input.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>python</span>
+                        <span>cli</span>
+                        <span>security basics</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/leonardoriossandoval" target="_blank">view code</a>
+                        <button type="button" onclick="alert('run locally with: python generadorContrasenyes.py')">
+                            how to run
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <h2>port scanner</h2>
+
+                    <p>
+                        educational python script to scan ports on a target machine.
+                        this project helped me understand networking basics, sockets and services.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>python</span>
+                        <span>networking</span>
+                        <span>sockets</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/leonardoriossandoval" target="_blank">view code</a>
+                        <button type="button" onclick="alert('run locally with: python scanerPorts.py')">
+                            how to run
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- skills: habilitats -->
+        <section id="skills" class="skills-section">
+            <h1 class="titolprin">skills</h1>
+
+            <p class="skills-intro">
+                a mix of technical skills, software development experience and professional background acquired through
+                studies, personal projects and real work environments.
+            </p>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <span class="skill-icon">💻</span>
+                    <h2>software development</h2>
+
+                    <p>
+                        experience building academic and personal projects using java, c#, html, css, javascript and sql.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>java</span>
+                        <span>c#</span>
+                        <span>javascript</span>
+                        <span>sql</span>
+                        <span>html/css</span>
+                    </div>
+                </article>
+
+
+                <article class="skill-card">
+                    <span class="skill-icon">🗄️</span>
+                    <h2>databases and erp</h2>
+
+                    <p>
+                        practical experience working with sql queries, sage, crystal reports and business data.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>sql</span>
+                        <span>sage</span>
+                        <span>crystal reports</span>
+                        <span>erp</span>
+                    </div>
+                </article>
+
+
+                <article class="skill-card">
+                    <span class="skill-icon">⚙️</span>
+                    <h2>engineering mindset</h2>
+
+                    <p>
+                        analytical background from engineering studies, with a base in mathematics, physics and problem solving.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>analysis</span>
+                        <span>logic</span>
+                        <span>problem solving</span>
+                    </div>
+                </article>
+
+
+                <article class="skill-card">
+                    <span class="skill-icon">🤝</span>
+                    <h2>customer and business experience</h2>
+
+                    <p>
+                        previous experience in customer service and sales, useful for understanding users and business needs.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>communication</span>
+                        <span>sales</span>
+                        <span>teamwork</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- footer: contacte -->
+    <footer id="contact">
+        <h1>contact</h1>
+
+        <div class="footer-content">
+            <div>
+                <strong>email:</strong>
+                <span>leonardorioslr@gmail.com</span>
+            </div>
+
+            <div>
+                <strong>location:</strong>
+                <span>terrassa / barcelona</span>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
+    </footer>
+
+
+    <!-- javascript de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
 </body>
-
-<footer style="padding-bottom: 30px;">
-    <h1 style="padding-left: 15px; padding-top:20px">Contact:</h1>
-    <div class="containersalt">
-        <div class="izq"> 
-             <b>Gmail:</b><i>  leonardorioslr@gmail.com</i>
-             <br>
-             <b>Gmail:</b><i>  leonardorioslr@gmail.com</i>
-             <br>
-             <b></b>
-        
-        
-        
-        </div>
-        <div class="der">    Terrassa/Barcelona   </div>
-    </div>
-
-
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-<script src="js/helpers.js"></script>
-<script src="js/handlers.js"></script>
-<script src="js/app.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-
-
-    </script>
 
 </html>
