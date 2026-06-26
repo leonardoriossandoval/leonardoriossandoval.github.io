@@ -357,3 +357,259 @@ footer h1 {
         justify-content: center;
     }
 }
+
+/* studies diagram */
+.studies-diagram {
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto 90px auto;
+}
+
+.studies-intro {
+    max-width: 760px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.studies-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 42px;
+    font-size: 14px;
+}
+
+.studies-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+.legend-dot.done {
+    background-color: #22c55e;
+}
+
+.legend-dot.current {
+    background-color: #f59e0b;
+}
+
+.legend-dot.pending {
+    background-color: #9ca3af;
+}
+
+.study-year {
+    margin-bottom: 56px;
+}
+
+.study-year-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #2980b9;
+}
+
+.study-semester {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 22px;
+}
+
+.study-semester-label {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 18px;
+    color: #374151;
+}
+
+.study-line {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+.study-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26px;
+    height: 3px;
+    background-color: #dbeafe;
+    z-index: 0;
+    border-radius: 999px;
+}
+
+.study-node {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 20px;
+    padding: 18px 14px 14px 14px;
+    min-height: 140px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.study-node::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background-color: #9ca3af;
+    border: 3px solid white;
+}
+
+.study-node h3 {
+    font-size: 16px;
+    margin: 6px 0 10px 0;
+    line-height: 1.4;
+}
+
+.study-node p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* estats */
+.study-node.done {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.study-node.done::before {
+    background-color: #22c55e;
+}
+
+.study-node.current {
+    border-color: #f59e0b;
+    background-color: #fffbeb;
+}
+
+.study-node.current::before {
+    background-color: #f59e0b;
+}
+
+.study-node.pending {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+.study-node.pending::before {
+    background-color: #9ca3af;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .study-semester {
+        grid-template-columns: 1fr;
+    }
+
+    .study-semester-label {
+        padding-top: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .study-line {
+        grid-template-columns: 1fr;
+    }
+
+    .study-line::before {
+        display: none;
+    }
+
+    .study-node::before {
+        display: none;
+    }
+
+    .study-node {
+        min-height: auto;
+    }
+}
+
+
+/* credits summary */
+.credits-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 32px auto 20px auto;
+}
+
+.credits-card {
+    border: 2px solid #85c1e9;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.12);
+}
+
+.credits-card span {
+    display: block;
+    font-size: 34px;
+    color: #2980b9;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.credits-card p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* progress bar */
+.credits-progress {
+    width: min(100%, 720px);
+    height: 18px;
+    margin: 0 auto 42px auto;
+    background-color: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+}
+
+#approvedProgressBar {
+    height: 100%;
+    width: 0;
+    background-color: #22c55e;
+    transition: width 0.6s ease;
+}
+
+#currentProgressBar {
+    height: 100%;
+    width: 0;
+    background-color: #f59e0b;
+    transition: width 0.6s ease;
+}
+
+/* credits responsive */
+@media (max-width: 900px) {
+    .credits-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .credits-summary {
+        grid-template-columns: 1fr;
+    }
+}
