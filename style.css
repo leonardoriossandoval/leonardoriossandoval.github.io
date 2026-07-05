@@ -515,6 +515,18 @@ footer h1 {
     background-color: #9ca3af;
 }
 
+.study-node.pendingConva {
+    border-color: #9ca3af;
+    background-color: #AFE0ED;
+}
+
+.study-node.pendingConva::before {
+    background-color: #9ca3af;
+}
+
+
+
+
 /* responsive */
 @media (max-width: 900px) {
     .study-semester {
