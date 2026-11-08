@@ -1,6 +1,6 @@
 # Leo Ríos — Portfolio
 
-Personal portfolio of Leonardo Ríos Sandoval, junior software developer (Terrassa / Barcelona).
+Personal portfolio of Leonardo Ríos Sandoval, junior software developer
 Static site with no build step, ready for GitHub Pages: `https://leonardoriossandoval.github.io/`
 
 ## Structure
