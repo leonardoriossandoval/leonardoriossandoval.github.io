@@ -18,12 +18,6 @@ main>section.chapter--words{height:240vh}
 .live .wire.flow{opacity:1;animation:flow 1.5s linear infinite}
 @keyframes flow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 #wave1,#wave2{stroke-dasharray:1;stroke-dashoffset:1}
-.pcb-wrap{perspective:1400px}
-.pcb{width:100%;height:auto;transform-origin:50% 65%;will-change:transform;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6))}
-#traces path{stroke-dasharray:1;stroke-dashoffset:1}
-#flows path{stroke-dasharray:.05 .95;opacity:0}
-.lit #flows path{opacity:.9;animation:flow 1.8s linear infinite}
-.comp{opacity:0}
 .chapter__bar{position:absolute;left:0;right:0;bottom:28px;width:min(var(--max),100%);margin-inline:auto;padding-inline:var(--gutter)}
 .chapter__bar span{display:block;height:2px;background:var(--grad);transform-origin:0 50%;transform:scaleX(var(--p,0));box-shadow:0 0 0 0 transparent;border-radius:2px}
 .chapter__bar::before{content:"";position:absolute;left:var(--gutter);right:var(--gutter);height:2px;background:var(--line)}
@@ -78,3 +72,9 @@ main>section.chapter--words{height:240vh}
   .floaters span{font-size:11px;padding:8px 11px}
   .chapter__bar{bottom:18px}
 }
+
+/* figure inside a pinned chapter */
+.viz.iso{background:none;color:inherit}
+.viz.iso .iso-plate-corner[data-corner="hint"]{display:block}
+@media (max-width:900px){.viz.iso .iso-plate{padding:40px 10px 40px}.viz.iso .iso-plate-corner{font-size:10px}}
+@media (max-width:640px){.viz.iso .iso-plate-corner[data-corner="hint"]{display:none}}

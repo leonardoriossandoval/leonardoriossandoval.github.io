@@ -1,0 +1,31 @@
+/* Leo Ríos — portfolio · isometric figures (Anatomy kit) themed to the site palette */
+.iso.fig-theme{
+  --anatomy-page:#07080B;--anatomy-card:#0C0F15;--anatomy-text:#8B91A0;--anatomy-strong:#ECEEF3;--anatomy-muted:#5D6372;
+  --anatomy-paper:#0C0F15;--anatomy-face:#141A24;--anatomy-top:#161D29;
+  --anatomy-shade-0:#0A0D13;--anatomy-shade-1:#0D1118;--anatomy-shade-2:#10151E;--anatomy-shade-3:#131924;
+  --anatomy-lit-top:#1E2A3D;--anatomy-lit-shade:#172133;
+  --anatomy-hi:#C9D6EA;--anatomy-mid:#5A6B86;--anatomy-lo:#34405A;--anatomy-faint:#222B3B;--anatomy-lit:#E9F6FF;
+  --anatomy-halo:#020306;--anatomy-dot:#C9D6EA;
+  --anatomy-red:#FF6B6B;--anatomy-green:#34D399;--anatomy-blue:#60A5FA;
+  --anatomy-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+.fig-theme .iso-figure{margin:0}
+.fig-theme .iso-plate{border-radius:var(--r-l,24px);box-shadow:0 0 0 1px rgba(255,255,255,.1),0 60px 120px -50px rgba(59,130,246,.35);padding:46px 18px 44px}
+.fig-theme .iso-plate-corner{font-family:var(--anatomy-mono);letter-spacing:.06em}
+.fig-theme .iso-stage{outline:none;cursor:crosshair}
+.fig-theme .iso-stage:focus-visible{outline:2px solid #22D3EE;outline-offset:6px;border-radius:8px}
+
+/* BSPD bench: what the live code switches */
+.bspd-screen{fill:#04060A;stroke:none}
+.bspd-screen-edge{fill:none}
+.bspd-digits{fill:#22D3EE;font-family:var(--anatomy-mono);font-weight:600;letter-spacing:.04em;transition:fill .3s}
+.bspd-led{fill:#3A1416;stroke:var(--anatomy-lo);stroke-width:.5;transition:fill .25s,filter .25s}
+.bspd-lamp{transition:opacity .35s,filter .35s}
+.bspd-lamp .iso-top{fill:#DDF5FF}
+.bspd-stage:not(.is-tripped) .bspd-lamp{filter:drop-shadow(0 0 6px rgba(34,211,238,.75))}
+.bspd-stage.is-tripped .bspd-lamp{opacity:.32}
+.bspd-stage.is-tripped .bspd-led{fill:#FF6B6B;filter:drop-shadow(0 0 4px #FF6B6B)}
+.bspd-stage.is-tripped .bspd-digits{fill:#FF6B6B}
+.bspd-stage.is-timing .bspd-digits{fill:#FBBF24}
+.bspd-stage.is-timing .bspd-cap .iso-edge,.bspd-stage.is-tripped .bspd-cap .iso-edge{stroke:#FBBF24}
+@media (prefers-reduced-motion:reduce){.bspd-led,.bspd-lamp,.bspd-digits{transition:none}}

@@ -29,16 +29,8 @@ U.car = p => {
   $('#wave1').style.strokeDashoffset = 1 - seg(p, .7, .92); $('#wave2').style.strokeDashoffset = 1 - seg(p, .76, .97);
 };
 
-/* PCB */
-const pcb = $('#pcb'), traces = $$('#traces path'), comps = $$('.comp');
-U.pcb = p => {
-  const t = ease(seg(p, 0, .32));
-  pcb.style.transform = `rotateX(${(1 - t) * 58}deg) rotateZ(${(1 - t) * -16}deg) scale(${.8 + .2 * t})`;
-  traces.forEach((tr, i) => tr.style.strokeDashoffset = 1 - seg(p, .2 + i * .022, .4 + i * .022));
-  comps.forEach((c, i) => { const k = ease(seg(p, .42 + i * .035, .5 + i * .035)); c.style.opacity = k; c.setAttribute('transform', `translate(0 ${(1 - k) * -60})`); });
-  const lit = p > .8; pcb.classList.toggle('lit', lit);
-  $('#ledHalo').setAttribute('opacity', lit ? .9 : 0); $('#ledBody').setAttribute('fill', lit ? '#6EE7B7' : '#1E3A2F');
-};
+/* BSPD test bench (js/bspd.js): the chapter progress picks the scenario */
+U.pcb = p => { if (window.LR_BSPD) window.LR_BSPD.scroll(p); };
 
 /* SQL → table → report */
 const toks = [['SELECT','k'],[' client,\n       ',''],['COUNT','k'],['(*) ',''],['AS','k'],[' invoices,\n       ',''],['SUM','k'],['(total) ',''],['AS','k'],[' invoiced\n',''],['FROM','k'],[' sales_invoices\n',''],['WHERE','k'],[' year = ',''],['2025','n'],['\n',''],['GROUP BY','k'],[' client\n',''],['ORDER BY','k'],[' invoiced ',''],['DESC','k'],[';','']];
