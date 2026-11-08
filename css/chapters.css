@@ -1,0 +1,80 @@
+/* Leo Ríos — portfolio · scroll chapters: Formula Student car, PCB, SQL/ERP, soft skills, timeline */
+/* ---------- scroll chapters (pinned, scrubbed by scroll) ---------- */
+main>section.chapter{height:330vh;padding:0}
+main>section.chapter--words{height:240vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;align-items:center}
+.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 55%,rgba(59,130,246,.12),transparent 70%);pointer-events:none}
+.stage__grid{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(24px,4vw,64px);align-items:center}
+.beats{position:relative;min-height:300px}
+.beat{position:absolute;inset:0 auto auto 0;width:100%;opacity:0;transform:translateY(24px);filter:blur(4px);transition:opacity .5s var(--ease),transform .5s var(--ease),filter .5s;pointer-events:none}
+.beat.on{opacity:1;transform:none;filter:none;pointer-events:auto}
+.beat h2{font-size:clamp(30px,3.6vw,52px);margin:16px 0 18px}
+.beat p:not(.tag){color:var(--muted);font-size:clamp(16px,1.3vw,18px);max-width:440px}
+.viz{position:relative}
+.viz--car{overflow:hidden;padding-top:8px}
+.car-svg{width:100%;height:auto;overflow:visible}
+.wire{fill:none;stroke:#22D3EE;stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1}
+.wire.flow{stroke:#fff;stroke-width:2.5;stroke-dasharray:.05 .95;stroke-dashoffset:0;opacity:0}
+.live .wire.flow{opacity:1;animation:flow 1.5s linear infinite}
+@keyframes flow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+#wave1,#wave2{stroke-dasharray:1;stroke-dashoffset:1}
+.pcb-wrap{perspective:1400px}
+.pcb{width:100%;height:auto;transform-origin:50% 65%;will-change:transform;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6))}
+#traces path{stroke-dasharray:1;stroke-dashoffset:1}
+#flows path{stroke-dasharray:.05 .95;opacity:0}
+.lit #flows path{opacity:.9;animation:flow 1.8s linear infinite}
+.comp{opacity:0}
+.chapter__bar{position:absolute;left:0;right:0;bottom:28px;width:min(var(--max),100%);margin-inline:auto;padding-inline:var(--gutter)}
+.chapter__bar span{display:block;height:2px;background:var(--grad);transform-origin:0 50%;transform:scaleX(var(--p,0));box-shadow:0 0 0 0 transparent;border-radius:2px}
+.chapter__bar::before{content:"";position:absolute;left:var(--gutter);right:var(--gutter);height:2px;background:var(--line)}
+/* IDE */
+.ide{border-radius:var(--r-l);border:1px solid var(--line-2);background:var(--bg-2);overflow:hidden;box-shadow:0 60px 120px -50px rgba(59,130,246,.4)}
+.ide__bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--panel)}
+.ide__bar i{width:10px;height:10px;border-radius:50%;background:#2A2F3A}
+.ide__bar span{margin-left:8px;font:500 12px/1 var(--mono);color:var(--dim)}
+.ide__bar b{margin-left:auto;font:600 12px/1 var(--mono);padding:7px 11px;border-radius:7px;background:rgba(255,255,255,.05);color:var(--muted);transition:background-color .3s,color .3s,box-shadow .3s}
+.ide__bar b.on{background:var(--green);color:#07080B;box-shadow:0 0 24px rgba(52,211,153,.5)}
+.ide__code{margin:0;padding:18px 20px;font:400 14px/1.75 var(--mono);min-height:200px;color:#C9D1E0;white-space:pre-wrap}
+.ide__out{display:grid;grid-template-columns:1.15fr .85fr;border-top:1px solid var(--line)}
+.res{width:100%;border-collapse:collapse;font:400 13px/1 var(--mono)}
+.res th{font-weight:500;color:var(--dim);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+.res td{padding:10px 16px;color:#C9D1E0;border-bottom:1px solid rgba(255,255,255,.04)}
+.res td+td,.res th+th{text-align:right}
+.res tbody tr{opacity:0;transform:translateX(-10px);transition:opacity .35s,transform .35s var(--ease)}
+.res tbody tr.on{opacity:1;transform:none}
+.chart{padding:14px 18px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.chart p{font:500 11px/1 var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.bars{display:flex;align-items:flex-end;gap:10px;flex:1;min-height:120px;margin-top:14px}
+.bars span{flex:1;background:var(--grad);border-radius:6px 6px 2px 2px;transform-origin:bottom;transform:scaleY(0);height:var(--h)}
+/* words */
+.chapter--words .stage{text-align:center}
+.words{font-size:clamp(30px,4.6vw,64px);font-weight:700;letter-spacing:-.035em;line-height:1.15;max-width:22ch;margin:22px auto 0}
+.words span{opacity:.14;transition:opacity .25s}
+.words span.key{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.floaters{position:absolute;inset:0;pointer-events:none}
+.floaters span{position:absolute;font:500 13px/1 var(--mono);padding:11px 15px;border-radius:999px;border:1px solid var(--line-2);background:rgba(15,18,24,.75);color:var(--muted);will-change:transform}
+/* timeline */
+.tl{display:grid;border-top:1px solid var(--line)}
+.tl__row{display:grid;grid-template-columns:210px 1fr auto;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line);transition:background-color .3s}
+.tl__row:hover{background:linear-gradient(90deg,rgba(59,130,246,.06),transparent 70%)}
+.tl__when{font:500 13px/1.4 var(--mono);color:var(--cyan)}
+.tl__row h3{font-size:clamp(20px,1.9vw,24px);letter-spacing:-.02em;margin-bottom:6px}
+.tl__row p{color:var(--muted);font-size:15px}
+@media (max-width:900px){
+  main>section.chapter{height:270vh}
+  .stage__grid{grid-template-columns:1fr;gap:14px;align-content:center;padding-top:56px}
+  .beats{min-height:210px}
+  .beat h2{font-size:clamp(26px,6.4vw,36px);margin:10px 0 10px}
+  .beat p:not(.tag){font-size:15px}
+  .tl__row{grid-template-columns:1fr;gap:10px}
+}
+@media (max-width:640px){
+  .beats{min-height:220px}
+  .ide__code{font-size:11.5px;padding:12px 14px;min-height:150px;line-height:1.6}
+  .ide__out{grid-template-columns:1.3fr .7fr}
+  .res{font-size:11px}.res th,.res td{padding:7px 8px}
+  .res th:nth-child(2),.res td:nth-child(2){display:none}
+  .chart{padding:10px}.bars{gap:5px;min-height:90px}
+  .floaters span{font-size:11px;padding:8px 11px}
+  .chapter__bar{bottom:18px}
+}

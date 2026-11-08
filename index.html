@@ -1,620 +1,479 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <!-- configuració bàsica de la pàgina -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leonardo ríos</title>
-
-    <!-- bootstrap ens dona navbar, botons i responsive fàcil -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-    <!-- font de google -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-
-    <!-- el nostre css -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo Ríos — Junior Software Developer</title>
+<meta name="description" content="Leo Ríos, junior software developer in Barcelona. ERP (Sage 200), SQL, Crystal Reports, WordPress and Python. Computer Engineering student at UOC.">
+<meta property="og:title" content="Leo Ríos — Junior Software Developer">
+<meta property="og:description" content="ERP, databases, electronics and the web. Computer Engineering at UOC, 120 of 240 credits passed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leonardoriossandoval.github.io/">
+<meta property="og:image" content="https://leonardoriossandoval.github.io/img/fot.png">
+<meta name="theme-color" content="#07080B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307080B'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='24' text-anchor='middle' fill='white'%3ELR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/chapters.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script src="js/core.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/terminals.js" defer></script>
+<script src="js/chapters.js" defer></script>
+<script src="js/skills.js" defer></script>
+<script src="js/studies.js" defer></script>
+<script src="js/contact.js" defer></script>
+<script src="js/hero-network.js" defer></script>
+<script src="js/main.js" defer></script>
 </head>
-
 <body>
-
-    <!-- navbar: menú superior -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-            <div class="container">
-                <a class="navbar-brand" href="#">Leonardo Ríos Sandoval</a>
-
-                <!-- botó del menú en pantalla petita -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- enllaços del menú -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">about me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <!-- carrusel: imatges principals -->
-    <main>
-
-        <section id="contenidor">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/202-nova-marca-uoc.jpg" class="d-block w-100" alt="engineering image">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./img/dam.jpg" class="d-block w-100" alt="software development image">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./img/frontend.jpg" class="d-block w-100" alt="frontend development image">
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">next</span>
-                </button>
-
-            </div>
-        </section>
-
-
-        <!-- about me: foto i descripció -->
-        <section id="about" class="about-section">
-            <h1 class="titolprin">about me</h1>
-
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="img/fot.png" alt="leonardo ríos">
-                </div>
-
-            <div class="about-text">
-                <p>
-                    My name is <b>Leonardo Ríos</b> and I am a <b>Junior Software Developer</b> with studies in
-                    <b>Cross-Platform Application Development</b> and a technical background in engineering.
-                </p>
-
-                <p>
-                    I have experience in <b>business software environments</b>, working with
-                    <b>SAGE ERP</b>, <b>SQL</b>, <b>Crystal Reports</b> and
-                    <b>Verifactu-related tasks</b>. I started at <b>Nortua</b> as an intern and later continued
-                    as a <b>Junior ERP Technician</b>, supporting real company processes and custom software needs.
-                </p>
-
-                <p>
-                    I have been also part of the <b>Electronics Control Units in the Hardware Department</b> at <b>e-Tech Racing</b>,
-                    a <b>Formula Student</b> team, where I collaborate on electronics-related tasks,
-                    <b>PCB assembly</b>, testing and validation of systems for an electric vehicle.
-                </p>
-
-                <p>
-                    Currently, I am studying <b>Computer Engineering at UOC</b> and focusing on
-                    <b>software development</b>, <b>databases</b>, <b>web technologies</b> and
-                    <b>automation</b>. My goal is to keep growing as a developer and build useful,
-                    practical and maintainable software.
-                </p>
-            </div>
-            </div>
-        </section>
-
-
-        <!-- portfolio: projectes -->
-        <section id="portfolio" class="portfolio-section">
-            <h1 class="titolprin">portfolio</h1>
-
-            <p class="portfolio-intro">
-                some small projects and tools developed while learning programming, automation and cybersecurity basics.
-            </p>
-
-            <div class="portfolio-grid">
-
-                <article class="project-card">
-                    <h2>password generator</h2>
-
-                    <p>
-                        simple python script to generate secure passwords using random characters.
-                        this project helped me practise python basics, strings and user input.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>python</span>
-                        <span>cli</span>
-                        <span>security basics</span>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/leonardoriossandoval" target="_blank">view code</a>
-                        <button type="button" onclick="alert('run locally with: python generadorContrasenyes.py')">
-                            how to run
-                        </button>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <h2>port scanner</h2>
-
-                    <p>
-                        educational python script to scan ports on a target machine.
-                        this project helped me understand networking basics, sockets and services.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>python</span>
-                        <span>networking</span>
-                        <span>sockets</span>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/leonardoriossandoval" target="_blank">view code</a>
-                        <button type="button" onclick="alert('run locally with: python scanerPorts.py')">
-                            how to run
-                        </button>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-
-        <!-- skills: habilitats -->
-        <section id="skills" class="skills-section">
-            <h1 class="titolprin">skills</h1>
-
-            <p class="skills-intro">
-                a mix of technical skills, software development experience and professional background acquired through
-                studies, personal projects and real work environments.
-            </p>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <span class="skill-icon">💻</span>
-                    <h2>software development</h2>
-
-                    <p>
-                        experience building academic and personal projects using java, c#, html, css, javascript and sql.
-                    </p>
-
-                    <div class="skill-tags">
-                        <span>java</span>
-                        <span>c#</span>
-                        <span>javascript</span>
-                        <span>sql</span>
-                        <span>html/css</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">🗄️</span>
-                    <h2>databases and erp</h2>
-
-                    <p>
-                        practical experience working with sql queries, sage, crystal reports and business data.
-                    </p>
-
-                    <div class="skill-tags">
-                        <span>sql</span>
-                        <span>sage</span>
-                        <span>crystal reports</span>
-                        <span>erp</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">⚙️</span>
-                    <h2>engineering mindset</h2>
-
-                    <p>
-                        analytical background from engineering studies, with a base in mathematics, physics and problem solving.
-                    </p>
-
-                    <div class="skill-tags">
-                        <span>analysis</span>
-                        <span>logic</span>
-                        <span>problem solving</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">🤝</span>
-                    <h2>customer and business experience</h2>
-
-                    <p>
-                        previous experience in customer service and sales, useful for understanding users and business needs.
-                    </p>
-
-                    <div class="skill-tags">
-                        <span>communication</span>
-                        <span>sales</span>
-                        <span>teamwork</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-<!-- studies -->
-<section id="studies" class="studies-diagram">
-    <h1 class="titolprin">studies</h1>
-
-    <p class="studies-intro">
-        roadmap of my degree in computer engineering at uoc.
-        each two rows represent one academic year.
-    </p>
-
-<div class="credits-summary">
-    <div class="credits-card">
-        <span id="approvedCredits">0</span>
-        <p>crèdits aprovats</p>
-    </div>
-
-    <div class="credits-card">
-        <span id="currentCredits">0</span>
-        <p>crèdits en curs</p>
-    </div>
-
-    <div class="credits-card">
-        <span id="pendingCredits">0</span>
-        <p>crèdits pendents</p>
-    </div>
-
-    <div class="credits-card">
-        <span id="degreeProgress">0%</span>
-        <p>progrés del grau</p>
-    </div>
-</div>
-
-<div class="credits-progress">
-    <div id="approvedProgressBar"></div>
-    <div id="currentProgressBar"></div>
-</div>
-
-    <div class="studies-legend">
-        <span><i class="legend-dot done"></i> aprovat</span>
-        <span><i class="legend-dot current"></i> en curs</span>
-        <span><i class="legend-dot pending"></i> pendent</span>
-    </div>
-
-    <!-- any 1 -->
-    <div class="study-year">
-        <h2 class="study-year-title">any 1</h2>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 1</div>
-            <div class="study-line">
-                <article class="study-node done">
-                    <h3>àlgebra (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>lògica</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>fonaments de programació (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>fonaments de computadors</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>competència comunicativa per a professionals tic</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="mark" href="#top" aria-label="Leo Ríos, back to top"><span class="mark__i" aria-hidden="true">LR</span>Leo Ríos</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#studies">Studies</a></li>
+      <li><a class="btn btn--primary" href="#contact">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" data-enter>
+    <div class="hero__bg" aria-hidden="true"><canvas id="net"></canvas></div>
+    <div class="wrap hero__grid">
+      <div>
+        <p class="pill in e1"><span class="live">AVAILABLE</span>Junior roles &amp; internships · Barcelona</p>
+        <h1 class="in e2">Software, data and hardware. <span class="grad">Built by Leo Ríos.</span></h1>
+        <p class="hero__lede in e3">Junior developer from Barcelona. <strong>One year on Sage 200</strong> as an ERP technician, a season wiring control units for a <strong>Formula Student</strong> electric car, and <strong>halfway through Computer Engineering</strong> at UOC.</p>
+        <div class="hero__cta in e4">
+          <a class="btn btn--primary" href="mailto:leonardorioslr@gmail.com">Email me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="#work">See my experience</a>
         </div>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 2</div>
-            <div class="study-line">
-                <article class="study-node done">
-                    <h3>anàlisi matemàtica (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>pràctiques de programació (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>treball en equip a la xarxa (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pendingConva">
-                    <h3>idioma modern i: anglès</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>interacció persona ordinador</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
+        <div class="stats in e5">
+          <div class="stat"><b data-count="120">120</b><span>UOC credits passed</span></div>
+          <div class="stat"><b>12 mo</b><span>ERP technician</span></div>
+          <div class="stat"><b>DAM</b><span>CFGS 2023–2025</span></div>
         </div>
+      </div>
+      <div class="card-portrait in e6">
+        <div class="card-portrait__in">
+          <div class="card-portrait__bar"><i></i><i></i><i></i><span>leo.profile</span></div>
+          <figure><img src="img/fot.png" alt="Portrait of Leonardo Ríos" width="800" height="920" fetchpriority="high"></figure>
+          <div class="card-portrait__meta">
+            <div><small>Role</small>Junior developer</div>
+            <div><small>Based in</small>BCN</div>
+          </div>
+        </div>
+      </div>
     </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
 
-    <!-- any 2 -->
-    <div class="study-year">
-        <h2 class="study-year-title">any 2</h2>
+  <div class="divider"></div>
 
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 3</div>
-            <div class="study-line"> 
-                <article class="study-node current">
-                    <h3>estadística</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>enginyeria de programari (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>disseny i programació orientada a objectes (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pendingConva">
-                    <h3>fonaments físics de la informàtica (c)</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pendingConva">
-                    <h3>administració i gestió d'organitzacions (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
-        </div>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 4</div>
-            <div class="study-line">
-                <article class="study-node done">
-                    <h3>grafs i complexitat</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>ús de bases de dades (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>disseny de bases de dades (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>estructura de computadors</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pendingConva">
-                    <h3>idioma modern ii: anglès</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
-        </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <p class="tag rv"><b>01</b> / About me</p>
+        <h2 class="rv d1">From engineering maths to software people use at work.</h2>
+        <p class="rv d2">I studied <strong>Cross-Platform Application Development</strong> and came to code from engineering: mathematics, physics and a habit of breaking problems into parts.</p>
+        <p class="rv d2">At <strong>Nortua</strong> I started as an intern and stayed on as a <strong>Junior ERP Technician</strong>, supporting real company processes. Now I study <strong>Computer Engineering at UOC</strong>, focused on databases, web technologies and automation.</p>
+        <p class="rv d3">The goal: keep growing as a developer and build software that is useful, practical and easy to maintain.</p>
+      </div>
+      <div class="code rv d2" aria-label="Profile summary written as code">
+        <div class="code__bar"><i></i><i></i><i></i><span>about_leo.py</span></div>
+<pre><span class="l"><span class="k">class</span> <span class="n">Developer</span><span class="p">:</span></span><span class="l">    name     <span class="p">=</span> <span class="s">"Leonardo Ríos Sandoval"</span></span><span class="l">    based_in <span class="p">=</span> <span class="s">"Barcelona"</span></span><span class="l">    studying <span class="p">=</span> <span class="s">"Computer Engineering · UOC"</span></span><span class="l">    focus    <span class="p">= [</span><span class="s">"databases"</span>, <span class="s">"web"</span>, <span class="s">"automation"</span><span class="p">]</span></span><span class="l">    languages <span class="p">= {</span></span><span class="l">        <span class="s">"catalan"</span>: <span class="s">"native"</span>, <span class="s">"spanish"</span>: <span class="s">"native"</span>,</span><span class="l">        <span class="s">"english"</span>: <span class="s">"upper-intermediate"</span></span><span class="l">    <span class="p">}</span></span><span class="l"></span><span class="l">    <span class="k">def</span> <span class="n">next</span>(self):</span><span class="l">        <span class="k">return</span> <span class="s">"a junior role where I can learn and ship"</span></span></pre>
+      </div>
     </div>
+  </section>
 
-    <!-- any 3 -->
-    <div class="study-year">
-        <h2 class="study-year-title">any 3</h2>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 5</div>
-            <div class="study-line">
-                <article class="study-node current">
-                    <h3>sistemes operatius</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node current">
-                    <h3>xarxes i aplicacions internet</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node current">
-                    <h3>administració de xarxes i sistemes operatius</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>gestió de projectes</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node current">
-                    <h3>intel·ligència artificial</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
+  <!-- CHAPTER: FORMULA STUDENT (scroll-scrubbed) -->
+  <section class="chapter" id="work" data-ch="car" aria-label="Formula Student: e-Tech Racing">
+    <div class="stage">
+      <div class="wrap stage__grid">
+        <div class="beats">
+          <div class="beat" data-r="0,.36"><p class="tag"><b>02</b> / Formula Student · e-Tech Racing</p><h2>An electric race car, <span class="grad">built by students.</span></h2><p>From February 2025 to April 2026 I was part of the UPC Formula Student team.</p></div>
+          <div class="beat" data-r=".36,.68"><p class="tag"><b>02</b> / Hardware Department</p><h2>Inside: <span class="grad">the control units.</span></h2><p>I worked on the electronic control units that connect the battery, the motor and the sensors.</p></div>
+          <div class="beat" data-r=".68,1.01"><p class="tag"><b>02</b> / Testing</p><h2>Tested before <span class="grad">it hits the track.</span></h2><p>Testing and validation of the car's systems, as one engineer in a big team.</p></div>
         </div>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 6</div>
-            <div class="study-line">
-                <article class="study-node pending">
-                    <h3>sistemes distribuïts</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-            </div>
+        <div class="viz viz--car">
+          <svg viewBox="0 0 1000 440" class="car-svg" role="img" aria-label="A Formula Student single-seater driving in, then shown in x-ray with its accumulator, control unit, motor and wiring">
+            <defs>
+              <linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g id="speed" stroke="url(#cg)" stroke-linecap="round" opacity=".7">
+              <line x1="40" y1="200" x2="220" y2="200" stroke-width="2"/><line x1="0" y1="250" x2="160" y2="250" stroke-width="1.5"/><line x1="80" y1="300" x2="240" y2="300" stroke-width="2"/>
+            </g>
+            <rect x="0" y="352" width="1000" height="3" fill="#1E2430"/>
+            <g id="lanes" fill="#2A3040"><rect x="0" y="384" width="80" height="4" rx="2"/><rect x="200" y="384" width="80" height="4" rx="2"/><rect x="400" y="384" width="80" height="4" rx="2"/><rect x="600" y="384" width="80" height="4" rx="2"/><rect x="800" y="384" width="80" height="4" rx="2"/><rect x="1000" y="384" width="80" height="4" rx="2"/><rect x="1200" y="384" width="80" height="4" rx="2"/></g>
+            <g id="car">
+              <ellipse cx="460" cy="353" rx="420" ry="9" fill="#000" opacity=".55"/>
+              <g id="shell">
+                <!-- rear wing: tall endplate with stacked elements -->
+                <path d="M150 248 L262 286 M172 248 L262 304" stroke="#3A404D" stroke-width="3"/>
+                <path d="M66 122 L190 122 L190 236 Q190 250 176 256 L150 264 L66 264 Z" fill="#121620" stroke="url(#cg)" stroke-width="2"/>
+                <g stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" opacity=".85"><path d="M80 152 Q130 140 180 146"/><path d="M80 182 Q130 170 180 176"/><path d="M80 212 Q130 202 180 206"/></g>
+                <rect x="80" y="232" width="56" height="16" rx="3" fill="#07080B"/>
+                <text x="108" y="244" text-anchor="middle" fill="#22D3EE" font-family="JetBrains Mono,monospace" font-size="11" font-weight="600">e-TECH</text>
+                <!-- diffuser + floor -->
+                <path d="M146 316 L264 316 L264 330 L168 330 Z" fill="#0D1017" stroke="#2A3040"/>
+                <rect x="250" y="314" width="478" height="9" rx="3" fill="#0B0D12" stroke="#2A3040"/>
+                <!-- monocoque, engine cover and nose -->
+                <path d="M262 318 L262 266 Q266 250 296 246 L418 238 L520 238 L546 234 Q604 240 664 262 L786 294 Q800 300 790 310 L702 318 Z" fill="#10141C" stroke="url(#cg)" stroke-width="2"/>
+                <!-- sidepod with intake and stripe -->
+                <path d="M296 318 L296 270 Q298 260 312 260 L484 260 Q500 260 504 274 L504 318 Z" fill="#141925" stroke="#2D3444" stroke-width="1.5"/>
+                <rect x="494" y="266" width="10" height="32" rx="2" fill="#07080B"/>
+                <path d="M312 302 L490 302" stroke="url(#cg)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M546 270 L700 302" stroke="#22D3EE" stroke-width="2" opacity=".6"/>
+                <path d="M330 274 l10 0 l-6 10 l9 0 l-15 16 l4 -12 l-8 0 z" fill="#22D3EE"/>
+                <text x="356" y="290" fill="#8B91A0" font-family="JetBrains Mono,monospace" font-size="13" font-weight="600">EV</text>
+                <!-- main roll hoop, head rest, driver, front hoop -->
+                <path d="M424 240 L424 190 Q424 180 434 180 L446 180" fill="none" stroke="#9AA3B5" stroke-width="5" stroke-linecap="round"/>
+                <path d="M430 240 Q436 214 452 210 L452 240 Z" fill="#1B2130"/>
+                <circle cx="470" cy="214" r="21" fill="url(#cg)"/>
+                <path d="M472 206 h18 a4 4 0 0 1 0 9 h-18 z" fill="#07080B"/>
+                <path d="M462 236 L478 230" stroke="#07080B" stroke-width="6" stroke-linecap="round"/>
+                <path d="M528 238 L536 214 L546 236" fill="none" stroke="#9AA3B5" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="508" cy="228" r="7" fill="none" stroke="#5D6372" stroke-width="3"/>
+                <!-- front wing -->
+                <path d="M720 318 L850 310 L850 317 L726 325 Z" fill="#141823" stroke="#3B82F6" stroke-width="1.5"/>
+                <path d="M690 328 L862 323 L862 335 L700 339 Z" fill="#141823" stroke="url(#cg)" stroke-width="1.5"/>
+                <rect x="852" y="294" width="14" height="48" rx="3" fill="#121620" stroke="url(#cg)" stroke-width="1.5"/>
+                <!-- suspension wishbones + pushrods -->
+                <g stroke="#6B7385" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M616 298 L552 262 M616 298 L552 306 M606 286 L560 244"/>
+                  <path d="M210 298 L268 268 M210 298 L268 306 M222 286 L268 248"/>
+                </g>
+              </g>
+              <g id="xray" opacity="0">
+                <g id="cells"></g>
+                <rect x="436" y="266" width="66" height="34" rx="5" fill="#0E1A2E" stroke="#22D3EE" stroke-width="2" filter="url(#glow)"/>
+                <text x="469" y="288" text-anchor="middle" fill="#ECEEF3" font-family="JetBrains Mono,monospace" font-size="14" font-weight="600">ECU</text>
+                <path class="wire" pathLength="1" d="M436 280 H414"/>
+                <path class="wire" pathLength="1" d="M436 294 Q 330 336 236 306"/>
+                <path class="wire" pathLength="1" d="M502 282 Q 570 270 640 300 L780 304"/>
+                <path class="wire flow" pathLength="1" d="M436 280 H414"/>
+                <path class="wire flow" pathLength="1" d="M436 294 Q 330 336 236 306"/>
+                <path class="wire flow" pathLength="1" d="M502 282 Q 570 270 640 300 L780 304"/>
+                <circle cx="210" cy="298" r="28" fill="none" stroke="#FBBF24" stroke-width="2" stroke-dasharray="4 4"/>
+                <text x="210" y="236" text-anchor="middle" fill="#FBBF24" font-family="JetBrains Mono,monospace" font-size="12">MOTOR</text>
+                <text x="340" y="236" text-anchor="middle" fill="#34D399" font-family="JetBrains Mono,monospace" font-size="12">ACCUMULATOR</text>
+                <text x="780" y="286" text-anchor="middle" fill="#22D3EE" font-family="JetBrains Mono,monospace" font-size="12">SENSORS</text>
+              </g>
+              <g class="wheel" id="w1"><circle cx="210" cy="298" r="47" fill="#07080B" stroke="#1A1F29" stroke-width="14"/><circle cx="210" cy="298" r="33" fill="#0D1118" stroke="url(#cg)" stroke-width="2"/><g stroke="#3B82F6" stroke-width="4" stroke-linecap="round"><path d="M210 298 L210 268"/><path d="M210 298 L238.5 288.7"/><path d="M210 298 L227.6 322.3"/><path d="M210 298 L192.4 322.3"/><path d="M210 298 L181.5 288.7"/></g><circle cx="210" cy="298" r="7" fill="url(#cg)"/></g>
+              <g class="wheel" id="w2"><circle cx="616" cy="298" r="47" fill="#07080B" stroke="#1A1F29" stroke-width="14"/><circle cx="616" cy="298" r="33" fill="#0D1118" stroke="url(#cg)" stroke-width="2"/><g stroke="#3B82F6" stroke-width="4" stroke-linecap="round"><path d="M616 298 L616 268"/><path d="M616 298 L644.5 288.7"/><path d="M616 298 L633.6 322.3"/><path d="M616 298 L598.4 322.3"/><path d="M616 298 L587.5 288.7"/></g><circle cx="616" cy="298" r="7" fill="url(#cg)"/></g>
+              <rect x="196" y="282" width="10" height="20" rx="3" fill="#FBBF24" opacity=".85"/>
+              <rect x="602" y="282" width="10" height="20" rx="3" fill="#FBBF24" opacity=".85"/>
+            </g>
+            <g id="hud" opacity="0">
+              <rect x="700" y="30" width="280" height="140" rx="14" fill="#0B0D12" stroke="#2A3040"/>
+              <text x="720" y="58" fill="#8B91A0" font-family="JetBrains Mono,monospace" font-size="12">CAN BUS · VALIDATION</text>
+              <circle cx="958" cy="54" r="5" fill="#34D399"/>
+              <polyline id="wave1" pathLength="1" points="720,120 740,100 760,126 780,92 800,118 820,96 840,124 860,90 880,116 900,98 920,122 940,94 960,112" fill="none" stroke="url(#cg)" stroke-width="2.5" stroke-linejoin="round"/>
+              <polyline id="wave2" pathLength="1" points="720,150 760,150 760,136 800,136 800,150 840,150 840,136 880,136 880,150 920,150 920,136 960,136" fill="none" stroke="#34D399" stroke-width="2"/>
+            </g>
+          </svg>
         </div>
+      </div>
+      <div class="chapter__bar" aria-hidden="true"><span></span></div>
     </div>
+  </section>
 
-    <!-- any 4 -->
-    <div class="study-year">
-        <h2 class="study-year-title">any 4</h2>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 7</div>
-            <div class="study-line">
-                <article class="study-node done">
-                    <h3>iniciativa emprenedora (c)</h3>
-                    <p>aprovat</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node done">
-                    <h3>pràctiques en empresa (c)</h3>
-                    <p>aprovat</p>
-                    <p>12 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>12 crèdits</p>
-                </article>
-            </div>
+  <!-- CHAPTER: PCB -->
+  <section class="chapter" data-ch="pcb" aria-label="Electronics: PCB assembly">
+    <div class="stage">
+      <div class="wrap stage__grid">
+        <div class="beats">
+          <div class="beat" data-r="0,.36"><p class="tag"><b>03</b> / Electronics</p><h2>It starts as <span class="grad">a bare board.</span></h2><p>Every control unit begins with a blank PCB, a schematic and a soldering station.</p></div>
+          <div class="beat" data-r=".36,.72"><p class="tag"><b>03</b> / PCB assembly</p><h2>Traces first, <span class="grad">then components.</span></h2><p>I assembled and soldered boards for the car's electronics, part by part.</p></div>
+          <div class="beat" data-r=".72,1.01"><p class="tag"><b>03</b> / Bring-up</p><h2>Power on. <span class="grad">Check every signal.</span></h2><p>A board only goes into the car once it has been tested and validated.</p></div>
         </div>
-
-        <div class="study-semester">
-            <div class="study-semester-label">semestre 8</div>
-            <div class="study-line">
-                <article class="study-node pending">
-                    <h3>treball final de grau</h3>
-                    <p>pendent</p>
-                    <p>12 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>6 crèdits</p>
-                </article>
-
-                <article class="study-node pending">
-                    <h3>optativa pendent a escollir</h3>
-                    <p>pendent</p>
-                    <p>12 crèdits</p>
-                </article>
-            </div>
+        <div class="viz pcb-wrap">
+          <svg viewBox="0 0 800 520" class="pcb" id="pcb" role="img" aria-label="A circuit board: copper traces are drawn, components drop onto it and an LED lights up">
+            <defs>
+              <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#14503F"/></pattern>
+              <filter id="ledglow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="8"/></filter>
+            </defs>
+            <rect x="30" y="30" width="740" height="460" rx="20" fill="#0A2A21" stroke="#1F6B54" stroke-width="2"/>
+            <rect x="30" y="30" width="740" height="460" rx="20" fill="url(#dots)"/>
+            <g fill="#07080B" stroke="#D4A84B" stroke-width="4"><circle cx="66" cy="66" r="11"/><circle cx="734" cy="66" r="11"/><circle cx="66" cy="454" r="11"/><circle cx="734" cy="454" r="11"/></g>
+            <text x="620" y="470" fill="#3E8E73" font-family="JetBrains Mono,monospace" font-size="14">LR-01 · ECU</text>
+            <g id="traces" fill="none" stroke="#D4A84B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <path pathLength="1" d="M130 140 H270 L310 180 H400"/>
+              <path pathLength="1" d="M130 200 H250 L290 240 H400"/>
+              <path pathLength="1" d="M520 200 H600 L640 160 H700"/>
+              <path pathLength="1" d="M520 260 H610 L650 300 V360"/>
+              <path pathLength="1" d="M460 280 V400 H350"/>
+              <path pathLength="1" d="M300 400 H230 L200 370 H150"/>
+              <path pathLength="1" d="M520 230 H690 V250"/>
+              <path pathLength="1" d="M400 260 H330 L300 290 V330"/>
+            </g>
+            <g id="flows" fill="none" stroke="#FFF3C4" stroke-width="3" stroke-linecap="round">
+              <path pathLength="1" d="M130 140 H270 L310 180 H400"/>
+              <path pathLength="1" d="M520 260 H610 L650 300 V360"/>
+              <path pathLength="1" d="M460 280 V400 H350"/>
+              <path pathLength="1" d="M300 400 H230 L200 370 H150"/>
+            </g>
+            <g fill="#D4A84B"><circle cx="400" cy="180" r="6"/><circle cx="700" cy="160" r="7"/><circle cx="650" cy="360" r="7"/><circle cx="350" cy="400" r="6"/><circle cx="150" cy="370" r="6"/><circle cx="690" cy="250" r="6"/><circle cx="300" cy="330" r="6"/></g>
+            <g class="comp"><rect x="90" y="110" width="40" height="120" rx="5" fill="#15181F" stroke="#3A404D"/><g fill="#D4A84B"><circle cx="110" cy="130" r="6"/><circle cx="110" cy="160" r="6"/><circle cx="110" cy="190" r="6"/><circle cx="110" cy="220" r="5"/></g></g>
+            <g class="comp" id="mcu"><rect x="400" y="160" width="120" height="120" rx="8" fill="#101216" stroke="#2D323C" stroke-width="2"/><circle cx="416" cy="176" r="4" fill="#2D323C"/><text x="460" y="226" text-anchor="middle" fill="#8B91A0" font-family="JetBrains Mono,monospace" font-size="16" font-weight="600">MCU</text></g>
+            <g class="comp"><rect x="290" y="324" width="20" height="44" rx="9" fill="#E7D6B6"/><rect x="290" y="334" width="20" height="4" fill="#8B4513"/><rect x="290" y="344" width="20" height="4" fill="#111"/><rect x="290" y="354" width="20" height="4" fill="#D4A84B"/></g>
+            <g class="comp"><rect x="310" y="390" width="44" height="20" rx="9" fill="#E7D6B6"/><rect x="320" y="390" width="4" height="20" fill="#C0392B"/><rect x="330" y="390" width="4" height="20" fill="#111"/><rect x="340" y="390" width="4" height="20" fill="#D4A84B"/></g>
+            <g class="comp"><circle cx="650" cy="380" r="26" fill="#1D3A73" stroke="#2F5BB0" stroke-width="2"/><path d="M632 380 H668" stroke="#9DB7E8" stroke-width="3"/><path d="M650 362 V398" stroke="#9DB7E8" stroke-width="3"/></g>
+            <g class="comp"><circle cx="700" cy="160" r="20" fill="#1D3A73" stroke="#2F5BB0" stroke-width="2"/><circle cx="700" cy="160" r="9" fill="none" stroke="#9DB7E8" stroke-width="2"/></g>
+            <g class="comp"><rect x="676" y="238" width="28" height="24" rx="4" fill="#5B4636"/></g>
+            <g class="comp" id="led"><circle id="ledHalo" cx="150" cy="370" r="22" fill="#34D399" opacity="0" filter="url(#ledglow)"/><circle id="ledBody" cx="150" cy="370" r="12" fill="#1E3A2F" stroke="#34D399" stroke-width="2"/></g>
+          </svg>
         </div>
+      </div>
+      <div class="chapter__bar" aria-hidden="true"><span></span></div>
     </div>
-</section>
+  </section>
 
-    </main>
-
-
-    <!-- footer: contacte -->
-    <footer id="contact">
-        <h1>contact</h1>
-
-        <div class="footer-content">
-            <div>
-                <strong>email:</strong>
-                <span>leonardorioslr@gmail.com</span>
-            </div>
-
-            <div>
-                <strong>location:</strong>
-                <span>terrassa / barcelona</span>
-            </div>
+  <!-- CHAPTER: CODE / ERP -->
+  <section class="chapter" data-ch="code" aria-label="ERP and SQL at Seuba-Nortua">
+    <div class="stage">
+      <div class="wrap stage__grid">
+        <div class="beats">
+          <div class="beat" data-r="0,.38"><p class="tag"><b>04</b> / Seuba-Nortua · ERP</p><h2>Business data, <span class="grad">every day.</span></h2><p>From April 2025 to March 2026, first as an intern, then as Junior ERP Technician on Sage 200.</p></div>
+          <div class="beat" data-r=".38,.7"><p class="tag"><b>04</b> / SQL</p><h2>Queries that <span class="grad">answer questions.</span></h2><p>SQL against real company data: who bought what, when, and for how much.</p></div>
+          <div class="beat" data-r=".7,1.01"><p class="tag"><b>04</b> / Reports &amp; Verifactu</p><h2>Reports people <span class="grad">can actually read.</span></h2><p>Crystal Reports turned results into documents the team used, alongside Verifactu e-invoicing tasks.</p></div>
         </div>
-    </footer>
+        <div class="viz">
+          <div class="ide" role="img" aria-label="An SQL query typed in an editor, its result table and a bar chart report">
+            <div class="ide__bar"><i></i><i></i><i></i><span>sage200 · invoices.sql</span><b id="runBtn">▶ Run</b></div>
+            <pre class="ide__code" id="sql"></pre>
+            <div class="ide__out">
+              <table class="res" id="res"><thead><tr><th>client</th><th>invoices</th><th>invoiced €</th></tr></thead><tbody></tbody></table>
+              <div class="chart" id="chart"><p>Invoiced by client</p><div class="bars"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chapter__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
 
+  <!-- EXPERIENCE AT A GLANCE -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="tag rv"><b>05</b> / Experience</p>
+        <h2 class="rv d1">Three jobs, <span class="grad">at a glance.</span></h2>
+      </div>
+      <div class="tl">
+        <article class="tl__row rv"><p class="tl__when">Apr 2025 — Mar 2026</p><div><h3>Junior ERP Technician</h3><p>Seuba-Nortua · Sage 200, SQL, Crystal Reports, Verifactu</p></div><div class="chips"><span>ERP</span><span>SQL</span></div></article>
+        <article class="tl__row rv d1"><p class="tl__when">Feb 2025 — Apr 2026</p><div><h3>Electronics, Hardware Dept.</h3><p>e-Tech Racing, Formula Student UPC · ECUs, PCB assembly, testing</p></div><div class="chips"><span>Hardware</span><span>Team</span></div></article>
+        <article class="tl__row rv d2"><p class="tl__when">Nov 2024 — now</p><div><h3>Web manager, freelance</h3><p>WordPress sites on Hostinger for small businesses, with Google Business and search basics</p></div><div class="chips"><span>WordPress</span><span>SEO</span></div></article>
+      </div>
+    </div>
+  </section>
 
-    <!-- javascript de bootstrap -->
-    <script src="js/progress.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="tag rv"><b>06</b> / Projects</p>
+        <h2 class="rv d1">Small Python tools, <span class="grad">built to learn.</span></h2>
+        <p class="rv d2">Practice in programming, automation and security basics. Both run from the terminal.</p>
+      </div>
+      <div class="projects__grid">
+        <article class="proj rv">
+          <div class="term"><div class="term__bar"><i></i><i></i><i></i><span>password_generator.py</span></div>
+            <pre class="typer" aria-label="Example run of the password generator" data-lines='[["$ ","python password_generator.py","cmd"],["Password length? ","16","q"],["Include symbols? (y/n) ","y","q"],["",""],["","Q7v#pL2!xR9m@tK4","y"]]'></pre></div>
+          <div class="proj__body">
+            <div class="proj__top"><img src="assets/icons/python-original.svg" alt="" width="30" height="30"><h3>Password generator</h3></div>
+            <p>Builds secure passwords from random characters. Practice with strings, user input and security basics.</p>
+            <div class="proj__foot">
+              <div class="chips"><span>python</span><span>cli</span><span>security</span></div>
+              <a href="https://github.com/leonardoriossandoval">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="proj rv d1">
+          <div class="term"><div class="term__bar"><i></i><i></i><i></i><span>port_scanner.py</span></div>
+            <pre class="typer" aria-label="Example run of the port scanner" data-lines='[["$ ","python port_scanner.py 127.0.0.1","cmd"],["","Scanning ports 1-1024 …","m"],["",""],["[open] ","22/tcp   ssh","o"],["[open] ","80/tcp   http","o"],["","done · 2 open ports","m"]]'></pre></div>
+          <div class="proj__body">
+            <div class="proj__top"><img src="assets/icons/python-original.svg" alt="" width="30" height="30"><h3>Port scanner</h3></div>
+            <p>Checks which ports are open on a machine you own. Practice with networking, sockets and services.</p>
+            <div class="proj__foot">
+              <div class="chips"><span>python</span><span>networking</span><span>sockets</span></div>
+              <a href="https://github.com/leonardoriossandoval">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="tag rv"><b>07</b> / Skills</p>
+        <h2 class="rv d1">What I bring <span class="grad">to a team.</span></h2>
+        <p class="rv d2">Technical skills from studies and real jobs, plus the people side from customer service and sales.</p>
+      </div>
+      <div class="bento">
+        <article class="spot b-a rv">
+          <p class="spot__n">01 · Software development</p>
+          <h3>Academic and personal projects in six languages.</h3>
+          <p>Java and C# for object-oriented work, Python for scripts, and the web trio for front-end.</p>
+          <div class="icons">
+            <img src="assets/icons/java-original.svg" alt="Java" title="Java" width="48" height="48">
+            <img src="assets/icons/csharp-original.svg" alt="C#" title="C#" width="48" height="48">
+            <img src="assets/icons/dotnetcore-original.svg" alt=".NET" title=".NET" width="48" height="48">
+            <img src="assets/icons/python-original.svg" alt="Python" title="Python" width="48" height="48">
+            <img src="assets/icons/javascript-original.svg" alt="JavaScript" title="JavaScript" width="48" height="48">
+            <img src="assets/icons/html5-original.svg" alt="HTML5" title="HTML5" width="48" height="48">
+            <img src="assets/icons/css3-original.svg" alt="CSS3" title="CSS3" width="48" height="48">
+          </div>
+        </article>
+        <article class="spot b-b rv d1">
+          <p class="spot__n">02 · Databases &amp; ERP</p>
+          <h3>SQL on real business data.</h3>
+          <div class="sql"><span class="k">SELECT</span> client, <span class="k">SUM</span>(total)
+<span class="k">FROM</span> invoices
+<span class="k">GROUP BY</span> client;</div>
+          <div class="icons">
+            <img src="assets/icons/microsoftsqlserver-original.svg" alt="SQL Server" title="SQL Server" width="48" height="48">
+            <img src="assets/icons/mysql-original.svg" alt="MySQL" title="MySQL" width="48" height="48">
+            <span class="ico" role="img" aria-label="Sage 200" title="Sage 200">SAGE</span>
+          </div>
+        </article>
+        <article class="spot b-c rv">
+          <p class="spot__n">03 · Engineering mindset</p>
+          <h3>Maths, physics and problem solving.</h3>
+          <p>An analytical base from engineering, now applied to hardware and systems.</p>
+          <div class="icons">
+            <img src="assets/icons/arduino-original.svg" alt="Electronics" title="Electronics" width="48" height="48">
+            <img src="assets/icons/linux-original.svg" alt="Linux" title="Linux" width="48" height="48">
+            <img src="assets/icons/git-original.svg" alt="Git" title="Git" width="48" height="48">
+          </div>
+        </article>
+        <article class="spot b-d rv d1">
+          <p class="spot__n">04 · Customer &amp; business</p>
+          <h3>I listen to users first.</h3>
+          <p>Years in customer service and sales taught me what a business actually needs.</p>
+          <div class="icons">
+            <img src="assets/icons/wordpress-plain.svg" class="inv" alt="WordPress" title="WordPress" width="48" height="48">
+            <img src="assets/icons/github-original.svg" class="inv" alt="GitHub" title="GitHub" width="48" height="48">
+          </div>
+        </article>
+        <article class="spot b-e rv d2">
+          <p class="spot__n">05 · Languages</p>
+          <h3>Three working languages.</h3>
+          <div class="lang" id="lang">
+            <div>Catalan<i style="--w:100%"></i><small>native</small></div>
+            <div>Spanish<i style="--w:100%"></i><small>native</small></div>
+            <div>English<i style="--w:72%"></i><small>upper-int.</small></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- CHAPTER: SOFT SKILLS -->
+  <section class="chapter chapter--words" data-ch="words" aria-label="Soft skills">
+    <div class="stage">
+      <div class="floaters" aria-hidden="true">
+        <span data-s="1.4" style="left:6%;top:18%">Customer service</span>
+        <span data-s="-1" style="right:8%;top:14%">Teamwork</span>
+        <span data-s="2" style="left:12%;bottom:16%">Sales</span>
+        <span data-s="-1.6" style="right:10%;bottom:20%">Communication</span>
+        <span data-s="0.8" style="left:42%;top:8%">Problem solving</span>
+        <span data-s="-0.6" style="left:38%;bottom:8%">Adaptability</span>
+      </div>
+      <div class="wrap">
+        <p class="tag" style="justify-content:center"><b>08</b> / Soft skills</p>
+        <h2 class="words" id="words">I listen to users, explain things clearly, work well in a team and learn fast. Customer service, sales and a race-car team taught me how.</h2>
+      </div>
+      <div class="chapter__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <!-- STUDIES -->
+  <section id="studies">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="tag rv"><b>09</b> / Studies</p>
+        <h2 class="rv d1">Computer Engineering at UOC, <span class="grad">halfway there.</span></h2>
+        <p class="rv d2">Four years, 240 credits, tracked like a project. Filter by status to see where each subject stands.</p>
+      </div>
+      <div class="app rv" id="app">
+        <div class="app__bar"><i></i><i></i><i></i><span>uoc-progress — grau-enginyeria-informatica</span></div>
+        <div class="app__body">
+          <div class="kpis">
+            <div class="kpi ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="bgc" cx="60" cy="60" r="50"/>
+                <circle class="b" cx="60" cy="60" r="50" id="ringB"/>
+                <circle class="a" cx="60" cy="60" r="50" id="ringA"/>
+              </svg>
+              <div class="ring__v"><b><span id="pct">50</span>%</b><small>degree<br>completed</small></div>
+            </div>
+            <div class="kpi"><small><i style="background:var(--green)"></i>Passed</small><b><span class="cnt" data-to="120">120</span><span class="u">/ 240 cr</span></b></div>
+            <div class="kpi"><small><i style="background:var(--amber)"></i>In progress</small><b><span class="cnt" data-to="30">30</span><span class="u">cr</span></b></div>
+            <div class="kpi"><small><i style="background:var(--todo)"></i>To go</small><b><span class="cnt" data-to="90">90</span><span class="u">cr</span></b></div>
+          </div>
+          <div class="filters" id="filters">
+            <span>filter:</span>
+            <button type="button" data-f="done" aria-pressed="false"><i style="background:var(--green)"></i>Passed</button>
+            <button type="button" data-f="doing" aria-pressed="false"><i style="background:var(--amber)"></i>In progress</button>
+            <button type="button" data-f="todo" aria-pressed="false"><i style="background:var(--todo)"></i>To go</button>
+          </div>
+          <div class="roadmap" id="roadmap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="tag rv" style="justify-content:center"><b>10</b> / Contact</p>
+      <h2 class="rv d1">Need a junior developer <span class="grad">who learns fast?</span></h2>
+      <p class="lead rv d2">Write to me about a role, an internship or a project. I usually reply within a day.</p>
+      <div class="mailbox rv d2">
+        <a href="mailto:leonardorioslr@gmail.com">leonardorioslr@gmail.com</a>
+        <button class="copy" type="button" id="copyBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy email</span></button>
+      </div>
+      <div class="contact__btns rv d3">
+        <a class="btn btn--primary" href="mailto:leonardorioslr@gmail.com?subject=Hello%20Leo">Send an email
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="https://github.com/leonardoriossandoval">Open my GitHub</a>
+      </div>
+      <div class="meta rv d3">
+        <div><b>Based in</b>Barcelona</div>
+        <div><b>Studying</b>Computer Engineering, UOC</div>
+        <div><b>Looking for</b>Junior roles &amp; internships</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Leonardo Ríos Sandoval</span>
+    <a class="link" href="#top">Back to top ↑</a>
+  </div>
+</footer>
 </body>
-
 </html>
