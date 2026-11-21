@@ -1,0 +1,105 @@
+/* Leo Ríos — pàgina tv/: comparativa de teles de 55" (usa els tokens de base.css) */
+main>section{position:relative;padding-block:clamp(72px,10vh,120px);scroll-margin-top:68px}
+.tv-nav a:not(.btn){font-size:14px}
+
+/* ---------- intro ---------- */
+.tv-hero{padding-top:clamp(130px,18vh,180px)!important;isolation:isolate;overflow:hidden}
+.tv-hero::before{content:"";position:absolute;left:50%;top:-30%;width:min(1000px,140vw);aspect-ratio:1;transform:translateX(-50%);background:radial-gradient(circle,rgba(59,130,246,.22),rgba(34,211,238,.06) 40%,transparent 65%);z-index:-1;pointer-events:none}
+.tv-hero h1{font-size:clamp(38px,6vw,78px);font-weight:800;letter-spacing:-.045em;margin:22px 0 22px;max-width:15ch}
+.tv-lede{font-size:clamp(17px,1.4vw,20px);color:var(--muted);max-width:640px}
+.tv-lede strong{color:var(--text);font-weight:600}
+.tv-verdict{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;border-radius:var(--r-m);overflow:hidden;background:var(--line);border:1px solid var(--line)}
+.tv-verdict div{background:var(--panel);padding:18px 20px}
+.tv-verdict small{display:block;font:500 11px/1 var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.tv-verdict b{display:block;margin:10px 0 6px;font-size:clamp(19px,1.7vw,23px);letter-spacing:-.02em}
+.tv-verdict span{font-size:14px;color:var(--muted)}
+.tv-verdict div:first-child b{color:var(--cyan)}
+.tv-verdict div:last-child b{color:#FF8A8A}
+
+/* ---------- capes ---------- */
+.tv-stack{list-style:none;margin:0 0 40px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:none}
+.tv-stack li{border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;background:linear-gradient(180deg,var(--panel),var(--bg-2))}
+.tv-stack b{display:block;font:600 13px/1.2 var(--mono);color:var(--text);margin-bottom:8px}
+.tv-stack span{font-size:14px;color:var(--muted);line-height:1.5}
+
+.tv-fig{margin:0 auto 48px;max-width:980px}
+.tv-fig .iso{--x:0}
+.tv-fig .iso-figure{margin:0}
+.tv-fig .iso-plate{border-radius:var(--r-l);box-shadow:0 0 0 1px rgba(255,255,255,.1),0 60px 120px -50px rgba(59,130,246,.35);padding:48px 18px 46px}
+.tv-fig .iso-legend{padding-inline:6px;color:var(--muted)}
+
+.tv-concepts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tv-concepts article,.tv-chips article{border:1px solid var(--line);border-radius:var(--r-m);padding:22px 24px;background:rgba(255,255,255,.02)}
+.tv-concepts h3,.tv-chips h3{font-size:19px;letter-spacing:-.02em;margin-bottom:10px}
+.tv-concepts p,.tv-chips p{color:var(--muted);font-size:15.5px}
+.tv-concepts strong,.tv-chips strong{color:var(--text);font-weight:600}
+.tv-chips .tag{margin-bottom:12px}
+
+/* ---------- figura: estats que canvia el codi viu ---------- */
+.tv-black{fill:#05070B;stroke:none}
+.tv-zone{fill:#BFE9FF;stroke:none;transition:opacity .18s linear}
+.tv-moon{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:.6;filter:drop-shadow(0 0 3px rgba(255,255,255,.9))}
+.tv-edge-leds circle{fill:#E9F6FF}
+.tv-chip .iso-top{fill:#1E2A3D}
+@media (prefers-reduced-motion:reduce){.tv-zone{transition:none}}
+
+/* ---------- rànquing ---------- */
+.tv-rank{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tv-card{position:relative;border:1px solid var(--line);border-radius:var(--r-l);padding:26px 26px 24px 26px;background:linear-gradient(180deg,var(--panel),var(--bg-2));display:flex;flex-direction:column;gap:14px}
+.tv-card.is-top{grid-column:1/-1;background:linear-gradient(var(--panel),var(--bg-2)) padding-box,linear-gradient(140deg,rgba(96,165,250,.7),rgba(255,255,255,.06) 40%,rgba(34,211,238,.5)) border-box;border:1px solid transparent;box-shadow:0 40px 90px -50px rgba(34,211,238,.45)}
+.tv-card.is-top .tv-specs{grid-template-columns:repeat(3,1fr)}
+.tv-card__n{position:absolute;top:22px;right:24px;font:700 44px/1 var(--f);letter-spacing:-.04em;color:var(--todo)}
+.tv-card.is-top .tv-card__n{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tv-card__head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;padding-right:56px}
+.tv-card h3{font-size:clamp(22px,2vw,28px)}
+.tv-price{display:flex;align-items:baseline;gap:10px}
+.tv-price b{font:700 20px/1 var(--f);color:var(--text)}
+.tv-price span{font:500 12px/1 var(--mono);color:var(--green)}
+.tv-type{font:500 12.5px/1.3 var(--mono);color:var(--cyan);text-transform:uppercase;letter-spacing:.04em}
+.is-low .tv-type{color:#FF8A8A}
+.tv-specs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tv-specs li{background:var(--bg-2);padding:10px 12px;font-size:14px;color:#C3C8D3}
+.tv-specs span{display:block;font:500 10.5px/1 var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.tv-why{color:var(--muted);font-size:15.5px}
+.tv-con{color:var(--muted);font-size:14.5px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.tv-con b{color:var(--text);font-weight:600}
+
+/* ---------- taula ---------- */
+.tv-table{margin-top:40px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg-2)}
+.tv-table table{width:100%;min-width:760px;border-collapse:collapse;font-size:14px}
+.tv-table th,.tv-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.tv-table thead th{font:600 13px/1.2 var(--f);color:var(--text);background:var(--panel)}
+.tv-table tbody th{font:500 11px/1.2 var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.tv-table td{color:#C3C8D3}
+.tv-table tbody tr:last-child>*{border-bottom:0}
+.tv-table td.ok{color:var(--green)}
+.tv-table td.meh{color:var(--amber)}
+.tv-table td.bad{color:#FF8A8A}
+.tv-table .tv-note{padding:12px 14px;border-top:1px solid var(--line)}
+.tv-note{font-size:13px;color:var(--dim)}
+
+/* ---------- processadors ---------- */
+.tv-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tv-final{margin-top:40px;padding:28px 30px;border-radius:var(--r-l);border:1px solid var(--line-2);background:radial-gradient(ellipse at 0 0,rgba(59,130,246,.14),transparent 60%),var(--panel)}
+.tv-final h3{font-size:24px;margin-bottom:12px}
+.tv-final p{color:var(--muted);max-width:760px}
+.tv-final p+p{margin-top:12px}
+.tv-final strong{color:var(--text);font-weight:600}
+.tv-sources{margin-top:40px}
+.tv-sources ul{margin:14px 0;padding-left:18px;color:var(--muted);font-size:14.5px;display:grid;gap:6px}
+.tv-foot{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .tv-stack{grid-template-columns:repeat(2,1fr)}
+  .tv-rank,.tv-concepts,.tv-chips{grid-template-columns:1fr}
+  .tv-card.is-top .tv-specs{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .tv-nav{display:none}
+  .tv-verdict{grid-template-columns:1fr}
+  .tv-stack{grid-template-columns:1fr}
+  .tv-card{padding:22px 18px}
+  .tv-fig .iso-plate{padding:44px 6px 64px}
+}
+.tv-hero .tag{flex-wrap:wrap}
